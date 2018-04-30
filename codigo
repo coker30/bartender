@@ -1,0 +1,192 @@
+char seleccion = 0;
+int vodka = 5;
+int tequila = 6;
+int whisky = 7;
+  int cola = 8;
+  int mineral = 9;
+  int naranja = 10;
+  int arandano = 11;
+     int oz = 5000;
+     int mediaoz = 1000;
+
+void setup() {
+pinMode(vodka, OUTPUT);
+pinMode(tequila, OUTPUT);
+pinMode(whisky, OUTPUT);
+pinMode(cola, OUTPUT);
+pinMode(mineral, OUTPUT);
+pinMode(naranja, OUTPUT);
+pinMode(arandano, OUTPUT);
+
+  digitalWrite(vodka,LOW); 
+  digitalWrite(tequila,LOW);
+  digitalWrite(whisky,LOW);
+  digitalWrite(cola,LOW);
+  digitalWrite(mineral,LOW);
+  digitalWrite(naranja,LOW);
+  digitalWrite(arandano,LOW);
+ 
+     Serial.begin(9600);  
+
+
+}
+
+void loop() {
+
+  if (Serial.available ())
+  {
+    seleccion = Serial.read();
+  }
+  {
+    {
+ if (seleccion == 'A'){
+      
+      digitalWrite(vodka,HIGH);
+      delay(oz);
+      digitalWrite(vodka,LOW);
+      delay(500);
+      digitalWrite(cola,HIGH);
+      delay(oz);
+      digitalWrite(cola,LOW);
+      Serial.println("done");
+      seleccion = 0;
+ }
+    }
+    {
+    if (seleccion == 'B'){
+      digitalWrite(vodka,HIGH);
+      delay(oz);
+      digitalWrite(vodka,LOW);
+      delay(500);
+      digitalWrite(mineral,HIGH);
+      delay(oz);
+      digitalWrite(mineral,LOW);
+      Serial.println("done");
+      seleccion = 0;
+    }
+    }
+    {
+    if (seleccion == 'C'){
+      digitalWrite(vodka,HIGH);
+      delay(oz);
+      digitalWrite(vodka,LOW);
+      delay(500);
+      digitalWrite(naranja,HIGH);
+      delay(oz);
+      digitalWrite(naranja,LOW);
+      Serial.println("done");
+      seleccion = 0;
+    }
+    }
+    if (seleccion == 'D')
+    {
+      digitalWrite(vodka,HIGH);
+      delay(oz);
+      digitalWrite(vodka,LOW);
+      delay(500);
+      digitalWrite(arandano,HIGH);
+      delay(oz);
+      digitalWrite(arandano,LOW);
+      Serial.println("done");      
+      seleccion = 0;
+    }
+    if (seleccion == 'E')
+    {
+      digitalWrite(tequila,HIGH);
+      delay(oz);
+      digitalWrite(tequila,LOW);
+      delay(500);
+      digitalWrite(cola,HIGH);
+      delay(oz);
+      digitalWrite(cola,LOW);
+      Serial.println("done");
+      seleccion = 0;
+    }
+    if (seleccion == 'F')
+    {
+      digitalWrite(tequila,HIGH);
+      delay(oz);
+      digitalWrite(tequila,LOW);
+      delay(500);
+      digitalWrite(mineral,HIGH);
+      delay(oz);
+      digitalWrite(mineral,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    }
+    if (seleccion == 'G')
+    {
+      digitalWrite(tequila,HIGH);
+      delay(oz);
+      digitalWrite(tequila,LOW);
+      delay(500);
+      digitalWrite(naranja,HIGH);
+      delay(oz);
+      digitalWrite(naranja,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    }
+    if (seleccion == 'H')
+    {
+      digitalWrite(tequila,HIGH);
+      delay(oz);
+      digitalWrite(tequila,LOW);
+      delay(500);
+      digitalWrite(arandano,HIGH);
+      delay(oz);
+      digitalWrite(arandano,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    }   
+    if (seleccion == 'I')
+    {
+      digitalWrite(whisky,HIGH);
+      delay(oz);
+      digitalWrite(whisky,LOW);
+      delay(500);
+      digitalWrite(cola,HIGH);
+      delay(oz);
+      digitalWrite(cola,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    } 
+    if (seleccion == 'J')
+    {
+      digitalWrite(whisky,HIGH);
+      delay(oz);
+      digitalWrite(whisky,LOW);
+      delay(500);
+      digitalWrite(mineral,HIGH);
+      delay(oz);
+      digitalWrite(mineral,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    }     
+    if (seleccion == 'K')
+    {
+      digitalWrite(whisky,HIGH);
+      delay(oz);
+      digitalWrite(whisky,LOW);
+      delay(500);
+      digitalWrite(naranja,HIGH);
+      delay(oz);
+      digitalWrite(naranja,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    }
+    if (seleccion == 'L')
+    {
+      digitalWrite(whisky,HIGH);
+      delay(oz);
+      digitalWrite(whisky,LOW);
+      delay(500);
+      digitalWrite(arandano,HIGH);
+      delay(oz);
+      digitalWrite(arandano,LOW);
+      Serial.println("done");
+      seleccion = 0;      
+    }                   
+  }
+
+
+}
